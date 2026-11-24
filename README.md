@@ -6,12 +6,24 @@ A mobile-friendly food, activity and weight journal. Choose Sign in with Google 
 
 ## Use Dayplate
 
-- **Journal** — log Maharashtrian, Goan and Continental dishes, Indian packaged foods and protein shakes. Pick a portion, see the nutrient totals and repeat a past meal. Each logged meal shows protein and total sugar by default. Choose **Customize columns** under **On your plate** to select nutrients such as carbs, fat, fiber and sodium. Set the columns per row or let them fit your screen. Tap any meal for its per-food breakdown. Partial totals show how many foods supplied a value.
+- **Journal** — log Maharashtrian, Goan and Continental dishes, Indian packaged foods and protein shakes. Pick a portion, see the nutrient totals and repeat a past meal. Each logged meal shows protein and total sugar by default. Choose **Customize columns** under **On your plate** to select nutrients such as carbs, fat, fiber and sodium. Set the columns per row or let them fit your screen. Tap any meal for its per-food breakdown. Open a row under **Macronutrient breakdown** to see the meals that contributed to the daily total. Partial totals show how many foods supplied a value.
 - **Foods** — browse 1,309 built-in items, including 63 packaged products and 20 Mumbai and Goan café dishes with recipe estimates for total and added sugars. Six of these dishes also have a Qmin Panaji menu entry for published calories. The Indian breakfast, lunch and snack filters include 120 additional regional recipes. Search by common names such as tomato omelette, besan chilla, rajma chawal or ragda pattice. Inspect each source, portion basis and missing nutrients in the food data audit. Home-cooked recipes use explicit estimates.
 - **Indian fast food** — choose a restaurant or search for an order. The 958 menu entries cover McDonald’s (207 West & South, 89 North & East), KFC (196), Burger King (99), Pizza Hut (297), Domino’s (53) and Wow! Momo (17). Entries distinguish sizes, crusts and the portion you can log. Restaurant availability varies. Each record links to its Indian menu source. Undeclared nutrients stay unknown, and conflicting menu rows are held out.
 - **Movement** — log a workout to see active calories above rest. Estimates use your workout duration, a matching activity from the 2024 Adult Compendium and body weight. Apple Health workout energy takes priority when available. Tap a session to review its estimate or supply missing details. You can also import Apple's Health export. On iPhone, go to Health → profile → Export All Health Data and save the file. In Dayplate choose Movement → Import Apple Health. Pick dates and sources, preview the result, and save.
 - **Progress** — review calorie targets, estimated resting energy needs, weight, measurements and activity over time.
 - **Friends** — claim a username, send a request, then invite an accepted friend to a 3-, 7- or 14-day challenge for steps, workout days, workout minutes or completed food-journal days. Both people see the metric and duration before accepting. The scoreboard shows only totals. You can also write an update, share a selected meal or workout, and cheer a friend.
+
+### At the café counter
+
+Baron Crumb and Tara Tiffin react to food selections, finished diary days, workouts and self-reported routine changes. Ask the other character for a reply or choose Quiet mode to hide the commentary on this device. Higgsfield generated the original café illustration. Reactions run locally, including in the offline diary.
+
+### Plan, log and review
+
+1. Open **Foods → My kitchen → New recipe**. Enter ingredients for the full batch, then set the yield, such as four katoris. Save a single ingredient with a yield of one to define a personal ladle, cup or dabba. A portion carries a nutrient estimate only when all ingredients supply that nutrient.
+2. In the Journal, choose **Plan my next meal**. Adjust quantities to preview the plate and its effect on your logged day. Choose **Compare another plate** to hold one option beside the current edit. Switch between the plates before saving or logging the one you want. **Save for later** keeps a private draft. **Ate this** logs the portions together. Editing a recipe later preserves the recipe captured in previous meals.
+3. Open **Progress → Your weekly review**. Inspect completed days, compare logged breakfasts, review weight and waist measurements, and see your chosen nutrients. Use the date selector to revisit a week. **Food variety this week** lets you record the groups present in mixed meals.
+4. In **Progress → Breakfast experiment**, choose two usual breakfasts. After having one, rate afternoon hunger from 1 to 5. Both breakfasts show their rating counts and averages. You can edit a rating on its diary date.
+5. In **Movement → Log workout**, select boxing and enable **Record boxing rounds** to save rounds, length, rest and perceived effort alongside the workout's active calories.
 
 ### Apple Health and Fitness
 
