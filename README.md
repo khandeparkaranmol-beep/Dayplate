@@ -1,8 +1,8 @@
 # Dayplate – Personal Health Tracker
 
-[Open Dayplate on GitHub Pages](https://khandeparkaranmol-beep.github.io/Dayplate/) · [Open the offline journal](./Dayplate.html) · [Download the full source](./Dayplate-source.zip)
+[Open Dayplate on GitHub Pages](https://khandeparkaranmol-beep.github.io/Dayplate/)
 
-A mobile-friendly food, activity and weight journal. The online edition supports Google Identity Services when a web client is configured, with the original ChatGPT account route available during setup. Each account has its own diary. A username lets you invite friends and compete without publishing your private health records.
+A mobile-friendly food, activity and weight journal. Choose Sign in with Google to sync across devices or Use offline to keep a diary in this browser. Both experiences open on GitHub Pages. Each account has its own diary. A username lets you invite friends and compete without publishing your private health records.
 
 ## Use Dayplate
 
@@ -26,7 +26,7 @@ Private journal records use the signed-in account identifier on every read and w
 
 The full site uses React, TypeScript, Vinext, a Cloudflare Worker and D1. Apple export parsing uses the MIT-licensed fflate and the SAX parser with its license in vendor/xml. The source tree includes a separate offline entry point that runs entirely in-browser. Social features require the signed-in server.
 
-Unzip Dayplate-source.zip and open its directory. Use Node 22.13 or newer.
+Use Node 22.13 or newer.
 
 ```sh
 npm ci
@@ -41,4 +41,6 @@ For local development run `npm run dev`. Apply SQL migrations from `drizzle/` in
 
 ## Configure Google sign-in
 
-Register a Google OAuth **Web application** client. Add the origin of the account-backed site to its authorized JavaScript origins. Set the public client ID as the Worker environment variable GOOGLE_CLIENT_ID and apply the google_sessions migration. Google signs the credential, the server verifies its signature and claims, and an HTTP-only session cookie opens the same private diary on other devices after sign-in. The GitHub Pages front door links to this account-backed site.
+Register a Google OAuth Web application with the JavaScript origin `https://khandeparkaranmol-beep.github.io`. Set GOOGLE_CLIENT_ID in the Worker environment and apply the database migrations. GitHub Pages renders the Google button and diary. The API verifies the signed Google identity and exchanges a single-use challenge for a revocable session held in the browser tab. The offline diary is separate and stays in IndexedDB.
+
+Build the Pages files from the project root with `node portable/build.mjs index.html pages` and `node portable/build.mjs Dayplate.html`. Copy `portable/sw.js` alongside both files for offline reopening.
