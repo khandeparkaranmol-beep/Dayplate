@@ -7,7 +7,7 @@ A mobile-friendly food, activity and weight journal. Choose Sign in with Google 
 ## Use Dayplate
 
 - **Journal** — log Maharashtrian, Goan and Continental dishes, Indian packaged foods and protein shakes. Pick a portion, see the nutrient totals and repeat a past meal.
-- **Foods** — browse 205 built-in items, including 63 packaged products. Inspect each source, portion basis and missing nutrients in the food data audit. Home-cooked recipes use explicit estimates.
+- **Foods** — browse 224 built-in items, including 63 packaged products and 19 Mumbai and Goan café foods. Inspect each source, portion basis and missing nutrients in the food data audit. Home-cooked recipes use explicit estimates.
 - **Movement** — add a workout or import Apple's Health export. On iPhone, go to Health → profile → Export All Health Data and save the file. In Dayplate choose Movement → Import Apple Health. Pick dates and sources, preview the result, and save.
 - **Progress** — review calorie targets, estimated resting energy needs, weight, measurements and activity over time.
 - **Friends** — claim a username, send a request, then invite an accepted friend to a 3-, 7- or 14-day challenge for steps, workout days, workout minutes or completed food-journal days. Both people see the metric and duration before accepting. The scoreboard shows only totals. You can also write an update, share a selected meal or workout, and cheer a friend.
