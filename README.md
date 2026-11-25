@@ -19,7 +19,7 @@ A mobile-friendly food, activity and weight journal. Choose Sign in with Google 
 
 - **Movement** — choose a catalog activity and duration from pickers to see active calories above rest. Estimates use your workout duration, a matching activity from the 2024 Adult Compendium and body weight. Apple Health workout energy takes priority when available. Tap a session to review its estimate or supply missing details. You can also import Apple's Health export. On iPhone, go to Health → profile → Export All Health Data and save the file. In Dayplate choose Movement → Import Apple Health. Pick dates and sources, preview the result, and save.
 - **Progress** — review calorie targets, estimated resting energy needs, weight, measurements and activity over time.
-- **Friends** — claim a username, send a request, then invite an accepted friend to a 3-, 7- or 14-day challenge for steps, workout days, workout minutes or completed food-journal days. Both people see the metric and duration before accepting. The scoreboard shows only totals. You can also write an update, share a selected meal or workout, and cheer a friend.
+- **Friends** — claim a username, send a request, then invite an accepted friend to a 3-, 7- or 14-day challenge for steps, workout days, workout minutes or completed food-journal days. Both people see the metric and duration before accepting. The scoreboard shows only totals. Use **Share from diary** to choose a logged date, preview a meal, individual food, workout or step count, and share it with one friend or all current friends.
 
 ### Plan, log and review
 
@@ -37,7 +37,7 @@ A web browser cannot request native HealthKit access or read the Apple Watch in 
 
 ### Account privacy
 
-Private journal records use the signed-in account identifier on every read and write. New accounts have no public username until they choose one. Friend requests and challenges require acceptance. Diary entries, body weight, and calorie targets do not appear in a friend feed. Your list of friends and requests is visible only to you. Updates you choose to share reach your accepted friends. Only the author sees total cheers, and each other reader sees only their own cheer. Challenge invitations and scores stay with the two participants. To move a diary from the offline edition, export it there, then choose Your account → Import a Dayplate backup online.
+Private journal records use the signed-in account identifier on every read and write. New accounts have no public username until they choose one. Friend requests and challenges require acceptance. Only diary entries you explicitly share appear in the feed. Body weight and calorie targets stay private. Your list of friends and requests is visible only to you. Each shared entry is a snapshot. Editing the diary later leaves the shared copy as it was. Remove the update in Friends to withdraw it. New friends do not receive previous diary shares. Only the author sees total cheers, and each other reader sees only their own cheer. Challenge invitations and scores stay with the two participants. To move a diary from the offline edition, export it there, then choose Your account → Import a Dayplate backup online.
 
 ## Source and development
 
