@@ -6,7 +6,7 @@ A mobile-friendly food, activity and weight journal. Choose Sign in with Google 
 
 ## Use Dayplate
 
-- **Journal** — log Maharashtrian, Goan and Continental dishes, Indian packaged foods and protein shakes. Pick a portion, see the nutrient totals and repeat a past meal. Each logged meal shows protein and total sugar by default. Choose **Customize columns** under **On your plate** to select nutrients such as carbs, fat, fiber and sodium. Set the columns per row or let them fit your screen. Tap any meal for its per-food breakdown. Open a row under **Macronutrient breakdown** to see the meals that contributed to the daily total. Partial totals show how many foods supplied a value.
+- **Journal** — log Maharashtrian, Goan and Continental dishes, Indian packaged foods and protein shakes. Pick a portion, see the nutrient totals and repeat a past meal. Each logged meal shows protein and total sugar by default. Choose **Meal nutrients** under **Your meals** to select nutrients such as carbs, fat, fiber and sodium. Set the columns per row or let them fit your screen. Tap any meal for its per-food breakdown. Open a row under **Macronutrient breakdown** to see the meals that contributed to the daily total. Partial totals show how many foods supplied a value.
 - **Foods** — browse 21,031 built-in items, including 63 packaged products and 20 Mumbai and Goan café dishes with recipe estimates for total and added sugars. Six of these dishes also have a Qmin Panaji menu entry for published calories. The Indian breakfast, lunch and snack filters include 120 additional regional recipes. Search by common names such as tomato omelette, besan chilla, rajma chawal or ragda pattice. Inspect each source, portion basis and missing nutrients in the food data audit. Home-cooked recipes use explicit estimates.
 - **Indian fast food** — choose a restaurant or search for an order. The 958 menu entries cover McDonald’s (207 West & South, 89 North & East), KFC (196), Burger King (99), Pizza Hut (297), Domino’s (53) and Wow! Momo (17). Entries distinguish sizes, crusts and the portion you can log. Restaurant availability varies. Each record links to its Indian menu source. Undeclared nutrients stay unknown, and conflicting menu rows are held out.
 - **US restaurants and drinks** — choose a chain and a menu source. The US catalog contains 19,578 portions from 76 chains, including 7,484 newer menu records and 12,094 records from the 2018 MenuStat archive. Sizes, sweetness levels, toppings and meal components can have separate entries. The year beside each serving identifies its published guide or snapshot. Undated live menus use the year checked. Local availability varies.
@@ -14,13 +14,9 @@ A mobile-friendly food, activity and weight journal. Choose Sign in with Google 
 - **Indo-Chinese, Tofu, Ghanaian and American** — 122 additional dishes include Hakka noodles, chilli tofu, waakye and buttermilk pancakes. The audit records ingredients, serving weights and preparation assumptions. US recipes use USDA SR28. Paneer uses IFCT and cooked whole-maize kenkey uses the FAO/INFOODS Western Africa table.
 - **Menu sources and audit** — individual records link to the applicable restaurant guide or research dataset. Missing nutrients stay unknown. The separate review checked serving units, source identity and nutrient values, and held out unresolved conflicts. The [2018 MenuStat dataset](https://doi.org/10.7910/DVN/K4NYTR) supplies the archive. [PrintSheetLab’s October 2026 Starbucks compilation](https://printsheetlab.com/guides/starbucks-nutrition-data/) supplies the newer Starbucks drinks.
 
-- **Movement** — log a workout to see active calories above rest. Estimates use your workout duration, a matching activity from the 2024 Adult Compendium and body weight. Apple Health workout energy takes priority when available. Tap a session to review its estimate or supply missing details. You can also import Apple's Health export. On iPhone, go to Health → profile → Export All Health Data and save the file. In Dayplate choose Movement → Import Apple Health. Pick dates and sources, preview the result, and save.
+- **Movement** — choose a catalog activity and duration from pickers to see active calories above rest. Estimates use your workout duration, a matching activity from the 2024 Adult Compendium and body weight. Apple Health workout energy takes priority when available. Tap a session to review its estimate or supply missing details. You can also import Apple's Health export. On iPhone, go to Health → profile → Export All Health Data and save the file. In Dayplate choose Movement → Import Apple Health. Pick dates and sources, preview the result, and save.
 - **Progress** — review calorie targets, estimated resting energy needs, weight, measurements and activity over time.
 - **Friends** — claim a username, send a request, then invite an accepted friend to a 3-, 7- or 14-day challenge for steps, workout days, workout minutes or completed food-journal days. Both people see the metric and duration before accepting. The scoreboard shows only totals. You can also write an update, share a selected meal or workout, and cheer a friend.
-
-### At the café counter
-
-Baron Crumb and Tara Tiffin react to food selections, finished diary days, workouts and self-reported routine changes. Ask the other character for a reply or choose Quiet mode to hide the commentary on this device. Higgsfield generated the original café illustration. Reactions run locally, including in the offline diary.
 
 ### Plan, log and review
 
@@ -62,3 +58,20 @@ For local development run `npm run dev`. Apply SQL migrations from `drizzle/` in
 Register a Google OAuth Web application with the JavaScript origin `https://khandeparkaranmol-beep.github.io`. Set GOOGLE_CLIENT_ID in the Worker environment and apply the database migrations. GitHub Pages renders the Google button and diary. The API verifies the signed Google identity and exchanges a single-use challenge for a revocable session held in the browser tab. The offline diary is separate and stays in IndexedDB.
 
 Build the Pages files from the project root with `node portable/build.mjs index.html pages` and `node portable/build.mjs Dayplate.html`. Copy `portable/sw.js` alongside both files for offline reopening.
+
+### Buddy week
+
+In Friends, two accepted friends can invite each other to a private seven-day habit challenge. Each sets a habit, a target number of local days, and a sharing preference. The week begins the next morning in each participant’s time zone. Check in once a day, reschedule, or ask for encouragement. Reminders appear in the journal and Friends while the site is open. Selected meals can be saved to My kitchen with their portions and nutrition. Head-to-head competitions remain available separately.
+
+### Responsive UX audit
+
+| Surface | What changed |
+|---|---|
+| Journal | Daily intake and meals come first. Marking a day complete produces a receipt with meal totals, selected nutrients and links back to the portions. |
+| Foods | Search results appear above the expanded category list. Custom foods, package lookup and the data audit share a disclosure. My kitchen remains accessible from the planner. |
+| Movement | Workout logging and movement challenges use the same activity and duration pickers. Saved sessions retain their duration and estimate. |
+| Progress | The weekly review prioritizes readings from logged entries. It separates movement and nutrient averages, with supporting calculations available on demand. |
+| Friends | Direct invitations show each person’s habit, days and sharing choice. Offline users have a route to sign-in. |
+| Forms and navigation | Mobile uses bottom tabs, tablet uses a side rail, and desktop has top navigation with a two-column workspace. A form keeps its draft when the viewport changes. |
+
+Browser checks covered 320 px and 390 px phones, an 820 px tablet, and a 1440 px desktop, using a test diary. Regression coverage includes nutrition, diary persistence, local dates through a daylight-saving transition, sharing and Apple Health file import. OAuth verification used synthetic keys. The browser checks did not use personal Google accounts or physical mobile devices.
