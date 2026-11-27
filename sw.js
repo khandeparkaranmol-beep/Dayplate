@@ -1,4 +1,4 @@
-const cacheName="dayplate-static-v26";
+const cacheName="dayplate-static-v27";
 const root=new URL("./",self.location.href).href;
 const offline=new URL("Dayplate.html",root).href;
 self.addEventListener("install",event=>event.waitUntil((async()=>{
